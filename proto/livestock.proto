@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package livestock;
+
+service LivestockService {
+  rpc GetAnimalDetails(GetAnimalDetailsRequest)
+      returns (GetAnimalDetailsResponse);
+}
+
+message GetAnimalDetailsRequest {
+  string animal_id = 1;
+}
+
+message GetAnimalDetailsResponse {
+  string animal_id = 1;
+  string tag_code = 2;
+  string species = 3;
+  string breed = 4;
+  string barn_id = 5;
+  string barn_name = 6;
+  string status = 7;
+}
